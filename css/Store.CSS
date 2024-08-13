@@ -18,7 +18,7 @@ input:focus {
 
 .header{
     background: linear-gradient(to left, rgb(191, 104, 212), black);
-    height: 45vh;
+    height: 90vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -41,9 +41,9 @@ input:focus {
 }
 
 .nav-Pc img{
-    height: 40px;
-    width: 40px;
-    margin-right: 6px;
+    height: 35px;
+    width: 35px;
+    margin-right: 2px;
     cursor: pointer;
 }
 
@@ -81,7 +81,7 @@ input:focus {
 }
 
 .buscar input{
-    width: 40vw;
+    width: 36vw;
     height: 30px;
     padding: 2px 2px 2px 12px;
     border-radius: 20px;
@@ -298,11 +298,11 @@ input:focus {
     position: fixed;
     top: 59px;
     right: 0;
-    width: 98vw;
+    width: 100vw;
     max-height: 800px;
     overflow-y: auto;
     background-color: rgb(0, 0, 0);
-    border: 1px solid white;
+    border: 1px 0px 0px 1px solid white;
     z-index: 10;
     animation: desplazamientoCarrito 1s;
 }
@@ -574,13 +574,12 @@ input:focus {
         margin: 30px 5vw; 
     }
 
+    .header{
+        height: 65vh;
+    }
+
     .productos-hogar, .productos-electronico, .productos-ropa, .resultado{
         border: 1px solid white;
-    }
-    
-    .carrito-list{
-        right: 55px;
-        width: 95vw;
     }
 }
 
