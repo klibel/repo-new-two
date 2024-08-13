@@ -529,7 +529,7 @@ function crearCardHTML(hogar) {
             <p>Precio: $ <span class="precio">${precio}</span></p>
           </div>
           <div class="btn-responsive">
-            <img class="agregar" src="https://cdn-icons-png.flaticon.com/128/2698/2698507.png" title="agregar a carrito" >
+            <img class="agregar" src="img/carrito de compras.png" title="agregar a carrito" >
             <button class="ver">Ver</button>
           </div>
         </div>
@@ -557,7 +557,7 @@ function crearCardHTML(electronico) {
                     <p>Precio: $ <span class="precio">${precio}</span></p>
                 </div>
                 <div class="btn-responsive">
-                    <img class="agregar" src="https://cdn-icons-png.flaticon.com/128/2698/2698507.png" title="agregar a carrito" >
+                    <img class="agregar" src="img/carrito de compras.png" title="agregar a carrito" >
                     <button class="ver">Ver</button>
                 </div>
             </div>
@@ -585,7 +585,7 @@ function crearCardHTML(caballero) {
                 <p>Precio: $ <span class="precio">${precio}</span></p>
             </div>
             <div class="btn-responsive">
-                <img class="agregar" src="https://cdn-icons-png.flaticon.com/128/2698/2698507.png" title="agregar a carrito" >
+                <img class="agregar" src="img/carrito de compras.png" title="agregar a carrito" >
                 <button class="ver">Ver</button>
             </div>
             </div>
@@ -613,7 +613,7 @@ function crearCardHTML(dama) {
                 <p>Precio: $ <span class="precio">${precio}</span></p>
             </div>
             <div class="btn-responsive">
-                <img class="agregar" src="https://cdn-icons-png.flaticon.com/128/2698/2698507.png" title="agregar a carrito" >
+                <img class="agregar" src="img/carrito de compras.png" title="agregar a carrito" >
                 <button class="ver">Ver</button>
             </div>
             </div>
@@ -672,7 +672,7 @@ inputBusqueda.addEventListener('keyup', e => {
                     <p>Precio: $ <span class="precio">${precio}</span></p>
                     </div>
                     <div class="btn-responsive">
-                    <img class="agregar" src="https://cdn-icons-png.flaticon.com/128/2698/2698507.png" title="agregar a carrito" >
+                    <img class="agregar" src="img/carrito de compras.png" title="agregar a carrito" >
                     <button class="ver">Ver</button>
                     </div>
                 </div>
@@ -724,7 +724,7 @@ function mostrarBusquedaNav(tipo) {
                 <p>Precio: $ <span class="precio">${precio}</span></p>
             </div>
             <div class="btn-responsive">
-                <img class="agregar" src="https://cdn-icons-png.flaticon.com/128/2698/2698507.png" title="agregar a carrito" >
+                <img class="agregar" src="img/carrito de compras.png" title="agregar a carrito" >
                 <button class="ver">Ver</button>
             </div>
             </div>
