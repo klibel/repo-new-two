@@ -312,7 +312,7 @@ input:focus {
     top: 59px;
     right: 0;
     width: 100vw;
-    max-height: 800px;
+    max-height: 380px;
     overflow-y: auto;
     background-color: rgb(0, 0, 0);
     border: 1px 0px 0px 1px solid white;
