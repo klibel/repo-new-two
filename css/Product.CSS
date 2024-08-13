@@ -89,11 +89,9 @@ main{
     margin-right: 5px;
 }
 
-.zoomed {
-    transform: scale(2); /* Ajusta el nivel de zoom según sea necesario */
-    transition: transform 0.8s ease; /* Agrega una transición suave al efecto de zoom */
+#zoom-img {
     cursor: pointer; /* Cambia el cursor al hacer clic en la imagen */
-    height: 40%;
+    height: 60%;
     margin: 2px;
     object-fit: cover;
 }

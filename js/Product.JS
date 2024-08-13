@@ -18,16 +18,7 @@ document.addEventListener('DOMContentLoaded', e => {
         }
     });
 });
-
-// Agregar el efecto de zoom al hacer clic en la imagen
-document.addEventListener('DOMContentLoaded', function() {
-    var img = document.getElementById('zoom-img');
-    img.addEventListener('click', function() {
-      this.classList.toggle('zoomed');
-    });
-});
   
-
 menu.addEventListener('click', e => {
     if (nav.style.display === 'none'){
         nav.style.display = 'flex';
@@ -65,5 +56,6 @@ function crearVista(){
         main.appendChild(vistaCard)
     }
 }
+zoomed
 
 
