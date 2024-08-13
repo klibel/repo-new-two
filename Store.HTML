@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>Store Romero</title>
+    <link rel="stylesheet" href="Store.CSS">
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2017/03/13/23/28/icon-2141484_640.png">
+</head>
+<body>
+    <header id="inicio">
+      <!-- nav superior -->
+        <nav class="nav-Pc">
+            <div class="menu-title">
+                <img src="https://cdn-icons-png.flaticon.com/128/660/660376.png" alt="menu" id="menu" title="Menu">
+                <h3 title="Titulo">Store Romero</h3>
+            </div>
+            <div class="buscar">
+                <input type="text" placeholder="Buscar" id="inputBusqueda">
+            </div>   
+            <div class="carrito-caja">
+                <img src="https://cdn-icons-png.flaticon.com/128/5567/5567012.png" alt="carrito de compras" id="carrito" title="carrito de compras">
+            </div>         
+        </nav>
+        <!-- nav lateral -->
+        <nav class="nav-lateral">
+          <div class="zone-inicio">
+            <a href="#inicio"><img src="https://cdn-icons-png.flaticon.com/128/4675/4675164.png">Inicio</a>
+          </div>
+          <div class="zone-comoComprar">
+            <a href="#como-comprar"><img src="https://cdn-icons-png.flaticon.com/128/859/859392.png"> Como comprar</a>
+          </div>
+          <div class="zone-contactos">
+            <a href="#contactos"><img src="https://cdn-icons-png.flaticon.com/128/15609/15609803.png">Contactos</a>
+          </div>
+          <div class="zone-hogar">
+            <a href="#hogar"><img src="https://cdn-icons-png.flaticon.com/128/4728/4728610.png">Hogar</a>
+            <a class="nav-buscar" href="#electrodomesticos" id="Electrodomestico"><img src="https://cdn-icons-png.flaticon.com/128/10982/10982533.png">Electrodomesticos</a>
+            <a class="nav-buscar" href="#muebles" id="Muebles"><img src="https://cdn-icons-png.flaticon.com/128/942/942165.png">Muebles</a>
+          </div>
+          <div class="zone-electronico">
+            <a href="#electronico"><img src="https://cdn-icons-png.flaticon.com/128/896/896530.png">Electronico</a>
+            <a class="nav-buscar" href="#movil" id="Móviles"><img src="https://cdn-icons-png.flaticon.com/128/977/977411.png">Movil</a>
+            <a class="nav-buscar" href="#pc" id="PC"><img src="https://cdn-icons-png.flaticon.com/128/9801/9801826.png">PC</a>
+          </div>
+          <div class="zone-ropa">
+            <a href="#ropa"><img src="https://cdn-icons-png.flaticon.com/128/1720/1720694.png">Ropa</a>
+            <a class="nav-buscar" href="#caballero" id="Hombre"><img src="https://cdn-icons-png.flaticon.com/128/14729/14729593.png">Caballero</a>
+            <a class="nav-buscar" href="#damas" id="Mujer"><img src="https://cdn-icons-png.flaticon.com/128/4273/4273296.png">Damas</a>
+          </div>
+        </nav>
+        <!-- carrito -->
+        <div class="carrito-list">
+            <table id="list-carrito">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th class="th-eliminar" id="vaciar"><img src="https://cdn-icons-png.flaticon.com/128/3964/3964085.png" title="vaciar carrito"></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>  
+              <div class="pagar"><button>Comprar</button></div>
+        </div>
+        <div class="carrusel">
+            <div class="header">
+                <button class="btn-principal" onclick="cambiarEstacion(-1)"><img src="https://cdn-icons-png.flaticon.com/128/32/32542.png"></button>
+                    <div class="text-principal">
+                        <h2>Store Romero</h2>
+                        <h3>¡Bienvenido a la experiencia Romero Online Store!</h3>
+                        <p>"Descubre nuestra amplia selección de productos para el hogar que harán de tu espacio un lugar acogedor y funcional."</p>
+                    </div>
+                <button class="btn-principal" onclick="cambiarEstacion(1)"><img src="https://cdn-icons-png.flaticon.com/128/271/271228.png"></button>
+            </div>
+            <div class="header">
+                <button class="btn-principal" onclick="cambiarEstacion(-1)"><img src="https://cdn-icons-png.flaticon.com/128/32/32542.png"></button>
+                    <div class="text-principal">
+                        <h2>Store Romero</h2>
+                        <h3>¡Bienvenido a la experiencia Romero Online Store!</h3>
+                        <p>"Descubre nuestra amplia gama de productos para gamers, programadores y dispositivos móviles. Encuentra todo lo que necesitas para potenciar tu pasión y rendimiento en un solo lugar."</p>
+                    </div>
+                <button class="btn-principal" onclick="cambiarEstacion(1)"><img src="https://cdn-icons-png.flaticon.com/128/271/271228.png"></button>
+            </div>
+            <div class="header">
+                <button class="btn-principal" onclick="cambiarEstacion(-1)"><img src="https://cdn-icons-png.flaticon.com/128/32/32542.png"></button>
+                    <div class="text-principal">
+                        <h2>Store Romero</h2>
+                        <h3>¡Bienvenido a la experiencia Romero Online Store!</h3>
+                        <p>"Explora nuestra colección de moda para encontrar las prendas perfectas que se adapten a tu estilo y personalidad."</p>
+                    </div>
+                <button class="btn-principal" onclick="cambiarEstacion(1)"><img src="https://cdn-icons-png.flaticon.com/128/271/271228.png"></button>
+            </div>
+          </div>
+    </header>
+    <main class="tienda">
+        <section class="resultado">
+            <div id="resultadosBusqueda">
+
+            </div>
+        </section>
+        <section class="productos-hogar" id="hogar">
+          <div class="titulo-hogar">
+            <h2>Lo mejor para el hogar</h2> 
+          </div>
+          <div class="zoneHogar">
+            <!-- Aqui van los productos del hogar de la tienda -->
+          </div>
+          </section>
+          <section class="productos-electronico" id="electronico">
+            <div class="titulo-hogar">
+              <h2>Lo mejor en equipos electricos</h2> 
+            </div>
+            <div class="zoneElectronico">
+              <!-- Aqui van los Electronicos como celulares, ps y otros de la tienda -->
+            </div>
+          </section>
+          <section class="productos-ropa" id="ropa">
+            <div class="titulo-hogar">
+              <h2>Lo mejor en ropa</h2> 
+            </div>
+            <div class="zone">
+              <!-- Aqui va la ropa de la tienda -->
+                <h3 id="caballero">Caballeros</h3>
+                <div class="zone-caballero">
+                  <!-- Aqui van la ropa de caballeros de la tienda -->
+                </div>
+                <h3 id="damas">Damas</h3>
+                <div class="zone-dama">
+                  <!-- Aqui van la ropa de damas de la tienda -->
+                </div>
+            </div>
+          </section>
+          <section id="como-comprar">
+            <h2>Como Comprar</h2>
+            <div class="pasos">
+              <div class="paso-1">
+                <h2><b>I</b></h2>
+                <h3>Primer paso</h3>
+                <p>Selecciona el producto que quieras comprar, Dale click a <span>Agregar a Carrito</span></p>
+              </div>
+              <div class="paso-2">
+                <h2><b>II</b></h2>
+                <h3>Segundo paso</h3>
+                <p>Luego de a ver agregado todo lo que querias comprar al carrito, Ve a la esquina superior del lado derecho Preciona el carrito, Asegurate de que esten todo lo que quieres comprar y has click en <span>Comprar</span></p>
+              </div>
+              <div class="paso-3">
+                <h2><b>III</b></h2>
+                <h3>Tercer paso</h3>
+                <p>Cuando estes en la zona de Factura revisa las cosas que nuevamente, Revisa el <b>Total</b> y si estas deacuerdo con todo los articulos que te llevaras Has click en <span>Pagar</span> y te llevara al chat en WhatsApp de los operadores para cerrar la compra!</p>
+              </div>
+            </div>
+          </section>
+      </main>
+      <footer class="footer" id="contactos"> <!-- footer -->
+        <h2>Contactos</h2>
+        <div class="zone-contacto">
+            <div class="info">
+                <ul>
+                    <li><p>Encuentra los productos más recientes y destacados.</p></li>
+                    <li><p>Explora nuestras secciones de hogar, electrónica, moda y más.</p></li>
+                    <li><p>Conoce nuestros términos y condiciones para una experiencia segura de compra.</p></li>
+                    <li><p>¿Necesitas ayuda? Ponte en contacto con nuestro equipo de atención al cliente.</p></li>
+                </ul>
+            </div>
+            <div class="mensaje">
+                <p>En Romero Online Store, nos enorgullecemos de ofrecerte una experiencia de compra en línea excepcional. Nuestro equipo está compuesto por individuos apasionados y talentosos que se esfuerzan por brindarte lo mejor en moda y estilo de vida.</p>
+            </div>
+            <div class="creadores">
+                <h3>Nuestros Creadores:</h3>
+                <ul>
+                    <li>Klibel Romero - Programador</li>
+                    <li>Alejandro González - Diseñador</li>
+                    <h3>Nuestro Fundador</h3>
+                    <li>Cristiano Ronaldo - Dueño</li>
+                </ul>
+
+            </div>
+            <div class="redes">
+                <ul>
+                  <h3>Redes:</h3>
+                    <li><a href="#https://wa.link/vm32nm" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/15707/15707820.png"></a></li>
+                    <li><a href="https://www.facebook.com/klibel.romero?locale=es_LA" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"></a></li>
+                    <li><a href="#https://www.instagram.com/klibel.romero" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png"></a></li>
+                </ul>
+            </div>
+        </div>
+        <h3>© 2024 Store Romero.com</h3>
+      </footer>
+    <script src="base de datos.JS"></script>
+    <script src="store.JS"></script>
+</body>
+</html>

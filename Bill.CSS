@@ -1,0 +1,255 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: black;
+    color: white;
+    max-width: 100%;
+    overflow-x: hidden;
+} 
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 100px 0 100px 0;
+}
+
+.factura{
+    width: 85vw;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    transition: all .3s;
+    padding: 10px 0 10px 0;
+}
+
+.factura h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.factura img{
+    width: 40px;
+}
+
+.factura table{
+    width: 95%;
+    height: auto;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+.factura td{
+    height: 50px;
+    border-top: 1px solid white;
+    width: 25%;
+}
+
+.factura button{
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    transition: all.5s;
+}
+
+.factura button:hover{
+    background-color: rgb(220, 156, 236);
+}
+
+.header{
+    background: linear-gradient(to left, rgb(191, 104, 212), black);
+    height: 45vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 100%; 
+    scroll-snap-align: start; 
+}
+
+.nav-Pc{
+    z-index: 10;
+    height: 58px;
+    width: 100vw;
+    position: fixed;
+    background-color: rgb(191, 104, 212);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid black;
+}
+
+.nav-Pc img{
+    height: 40px;
+    width: 40px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.nav-lateral{
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    animation: desplazamiento 1s ;
+    align-items: center;
+    background-color: rgb(191, 104, 212);
+    position: fixed;
+    top: 58px;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    border: 1px solid black;
+}
+
+@keyframes desplazamiento{
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.menu-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 12px 0px 12px;
+}
+
+.zone-inicio, .zone-contactos{
+    height: 80px;
+    width: 220px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.zone-inicio a, .zone-contactos a{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 0px 10px 0px;
+}
+
+#pagar a {
+    text-decoration: none;
+    color: black;
+}
+
+.zone-inicio img, .zone-contactos img{
+    width: 38px;
+    padding-right: 35px ;
+}
+
+
+.footer{
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zone-contacto{
+    height: auto;
+    width: 98vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.redes img{
+    width: 45px;
+}
+
+.info, .mensaje, .creadores, .redes{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+ 
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 610px) {
+    .nav-lateral{
+        width: 100vw;
+    }
+
+    .zone-inicio, .zone-hogar, .zone-electronico, .zone-ropa, .zone-contactos{
+        width: 80%;
+    }
+
+    .carrito-list{
+        width: 100vw;
+    }
+
+    .info, .mensaje, .creadores, .redes{
+        width: 70%;
+    }
+
+    .zone-contacto{
+       flex-direction: column;
+    }
+
+    .factura{
+        width: 98vw;
+    }
+
+}
+
+/* Media query para pantallas medianas */
+@media screen and (min-width: 481px) and (max-width: 899px) {
+    .info, .mensaje, .creadores, .redes{
+        width: 70%;
+    }
+
+    .zone-contacto{
+       flex-direction: column;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 499px) {
+    .vistaCard{
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .imgCard{
+        height: 50%;
+    }
+
+    .infoCard{
+        align-items: center;
+        height: 30%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1230px) {
+    .vistaCard{
+        flex-direction: column;
+        width: 100vw;
+        height: 70vh;
+    }
+
+    .imgCard{
+        height: 70%;
+    }
+    
+    .infoCard{
+        align-items: center;
+        height: 30%;
+    }
+}

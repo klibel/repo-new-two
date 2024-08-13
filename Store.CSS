@@ -1,0 +1,586 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: black;
+    color: white;
+    max-width: 100%;
+    overflow-x: hidden;
+} 
+
+section{
+    margin-top: 50px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.header{
+    background: linear-gradient(to left, rgb(191, 104, 212), black);
+    height: 45vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 100%;
+    scroll-snap-align: start; 
+}
+
+.nav-Pc{
+    z-index: 10;
+    height: 58px;
+    width: 100vw;
+    position: fixed;
+    background-color: rgb(191, 104, 212);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid black;
+}
+
+.nav-Pc img{
+    height: 40px;
+    width: 40px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.nav-lateral{
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    animation: desplazamiento 1s ;
+    align-items: center;
+    background-color: rgb(191, 104, 212);
+    position: fixed;
+    top: 58px;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    border: 1px solid black;
+    overflow-y: auto;
+}
+
+@keyframes desplazamiento{
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.menu-title, .buscar, .carrito-caja{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 12px 0px 12px;
+}
+
+.buscar input{
+    width: 40vw;
+    height: 30px;
+    padding: 2px 2px 2px 12px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.text-principal{
+    width: 60vw;
+}
+
+.text-principal h2 {
+    font-size: 35px;
+    overflow: hidden; /* Para que el texto no se muestre antes de la animación */
+    border-right: .15em solid rgb(122, 37, 143); /* Efecto de cursor */
+    white-space: nowrap; /* Para que el texto no se divida en varias líneas */
+    margin: 0 auto; /* Centrar el texto */
+    letter-spacing: .25em; /* Espaciado entre letras */
+    animation: typing 3s steps(40, end) infinite; /* Duración, efecto de escritura y repetición infinita */
+}
+  
+/* Definir la animación */
+@keyframes typing {
+   from { width: 0; }
+   to { width: 100%; }
+}
+  
+.text-principal p{
+    color: white;
+    font-size: 20px;
+}
+
+.carrusel {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.btn-principal{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.384);
+    transition: all .8s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+}
+
+.btn-principal img{
+    width: 50px;
+    transition: all .8s;
+}
+
+.btn-principal:hover{
+    width: 75px;
+    height: 75px;
+    color: rgba(255, 255, 255, 0.568);
+}
+
+.btn-principal img:hover{
+    width: 55px;
+}
+
+.productos-hogar, .productos-electronico, .productos-ropa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to left, rgba(190, 104, 212, 0.301), rgba(0, 0, 0, 0.301));
+    border-radius: 5px;
+}
+
+.resultado{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to left, rgba(190, 104, 212, 0.301), rgba(0, 0, 0, 0.301));
+    border-radius: 5px;
+}
+
+.contenido-card{
+    width: 50%;
+}
+
+.zone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoneHogar, .zoneElectronico, .zone-dama, .zone-caballero, #resultadosBusqueda{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Crea un diseño de 12 columnas */
+    margin: 20px 0px 20px 0px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    grid-column: span 3;
+    width: 400px; 
+    height: 200px;
+    box-sizing: border-box;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.card img {    
+    width: 190px;
+    height: 160px;
+    margin-left: 5px;
+    object-fit: cover;
+}
+  
+.card h3 {
+    margin: 5px 0;
+}
+  
+.card button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-responsive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.agregar {
+    width: 30px !important;
+    height: 30px !important;
+}
+  
+.ver {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    width: 40%;
+}
+
+.precio{
+    color: green;
+}
+
+.zone-inicio, .zone-contactos, .zone-comoComprar{
+    height: 80px;
+    width: 220px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.zone-hogar , .zone-electronico , .zone-ropa {
+    width: 220px;
+    border-bottom: 1px solid black;
+}
+
+.zone-inicio a, .zone-hogar a, .zone-electronico a, .zone-ropa a, .zone-contactos a, .zone-comoComprar a{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 0px 10px 0px;
+}
+
+.zone-inicio img, .zone-hogar img, .zone-electronico img, .zone-ropa img, .zone-contactos img, .zone-comoComprar img{
+    width: 38px;
+    padding-right: 35px ;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zone-contacto{
+    height: auto;
+    width: 98vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.redes img{
+    width: 45px;
+}
+
+.info, .mensaje, .creadores, .redes{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.carrito-list{
+    display: none;
+    position: fixed;
+    top: 59px;
+    right: 0;
+    width: 98vw;
+    max-height: 800px;
+    overflow-y: auto;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    z-index: 10;
+    animation: desplazamientoCarrito 1s;
+}
+
+.carrito-list thead{
+    background-color: rgb(191, 104, 212);
+}
+
+.carrito-list thead th{
+    width: 23%;
+}
+
+.pagar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagar button{
+    height: 30px;
+    width: 50%;
+    transition: all.5s;
+}
+
+.pagar button:hover{
+    background-color: rgb(220, 156, 236);
+}
+
+.img-carrito{
+   width: 150px;
+   object-fit: cover;
+   height: 150px;
+}
+
+.carrito-list table{
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.carrito-list td{
+    width: 22%;
+    text-align: center;
+
+}
+
+.th-eliminar{
+    width: 8%;
+}
+
+#vaciar img{
+    width: 30px;
+}
+
+.borrar-curso{
+    background-color:red;
+    color: white;
+    border-radius: 100%;
+    padding: 3px 7px 5px 6px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.borrar-curso:hover{
+    background-color: rgb(138, 5, 5);
+    color: rgb(253, 2, 2);
+    border-radius: 100%;
+    padding: 4px 8px 6px 7px;
+    font-size: 22px;
+}
+
+#como-comprar {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+#como-comprar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+  
+.pasos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; 
+    margin: 0 15px 0 15px;
+}
+  
+.paso-1, .paso-2, .paso-3 {
+    text-align: center;
+    width: 25%;
+    height: 80%;
+    z-index: 1; 
+}
+  
+#como-comprar h2,
+#como-comprar h3,
+#como-comprar p {
+    position: relative;
+    z-index: 1; 
+}
+  
+#como-comprar span {
+    color: rgb(237, 165, 255);
+}
+  
+
+@keyframes desplazamientoCarrito{
+    from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 580px) {
+    .zone {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+    .text-principal h2 {
+        animation: none;
+        font-size: 30px;
+        letter-spacing: 2px; /* Espaciado entre letras */
+        border-right: none; /* Efecto de cursor */      
+    }
+
+    .menu-title, .buscar, .carrito-caja{
+        margin: 2px;
+    }
+
+    .card {
+        grid-column: span 12; /* Cada tarjeta ocupará 12 columnas en pantallas con un ancho máximo de 480px */
+        width: 90vw;
+    }
+
+    .btn-principal, .text-principal p{
+        display: none;
+    }
+
+    .nav-lateral{
+        width: 100vw;
+    }
+
+    .zone-inicio, .zone-hogar, .zone-electronico, .zone-ropa, .zone-contactos, .zone-comoComprar{
+        width: 80%;
+    }
+
+    .info, .mensaje, .creadores, .redes{
+        width: 70%;
+    }
+
+    .zone-contacto{
+       flex-direction: column;
+    }
+
+    .img-carrito{
+        height: 70px;
+        width: 70px;
+    }
+
+    .pagar button{
+        width: 30%;
+    }
+
+    #como-comprar{
+        background-image: url('https://i.pinimg.com/564x/9a/60/85/9a6085f0de1fa15dd4f35e7d16b19c8c.jpg');
+        height: auto;
+    }
+
+    .pasos{
+        flex-direction: column;
+    }
+
+    .paso-1, .paso-2, .paso-3 {
+        width: 80%; 
+    }
+
+}
+
+/* Media query para pantallas medianas */
+@media screen and (min-width: 481px) and (max-width: 899px) {
+    .card {
+        grid-column: span 12; /* Cada tarjeta ocupará 6 columnas en pantallas con un ancho entre 481px y 840px */
+    }
+
+    .img-carrito{
+        height: 80px;
+        width: 80px;
+    }
+
+    .card img{
+        margin-left: 5px;
+        width: 48%;
+        height: 90%;
+    }
+
+    .btn-principal, .text-principal p{
+        display: none;
+    }
+
+    #como-comprar{
+        background-image: url('https://i.pinimg.com/564x/9a/60/85/9a6085f0de1fa15dd4f35e7d16b19c8c.jpg');
+        height: auto;
+    }
+
+    .pasos{
+        flex-direction: column;
+    }
+
+    .paso-1, .paso-2, .paso-3 {
+        width: 80%;
+    }
+
+    .info, .mensaje, .creadores, .redes{
+        width: 70%;
+    }
+
+    .zone-contacto{
+       flex-direction: column;
+    }
+
+    .pagar button{
+        width: 30%;
+    }
+}
+
+/* Media query para pantallas grandes */
+@media screen and (min-width: 900px) and (max-width: 1419px) {
+    .card {
+        grid-column: span 5; 
+    }
+
+    .card img{
+        width: 48%;
+        height: 90%;
+    }
+}
+
+@media screen and (min-width: 1420px) and (max-width: 1870px) {
+    .card {
+        grid-column: span 4; 
+    }
+}
+
+/* Media query para ajustar el margen en pantallas medianas y grandes */
+@media screen and (min-width: 950px) {
+    main {
+        margin: 30px 5vw; 
+    }
+
+    .productos-hogar, .productos-electronico, .productos-ropa, .resultado{
+        border: 1px solid white;
+    }
+    
+    .carrito-list{
+        right: 55px;
+        width: 95vw;
+    }
+}
+
