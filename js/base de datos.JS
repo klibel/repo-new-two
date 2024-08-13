@@ -517,6 +517,7 @@ const tablecarrito = document.querySelector('#list-carrito');
 const tbcarrito = document.querySelector('#list-carrito tbody');
 const vaciarCarrito = document.querySelector('#vaciar')
 let articulosCarrito = [];
+let numer = 0; // Inicializamos la variable
 
 function crearCardHTML(hogar) {
     const { nombre, precio, imagen } = hogar;
@@ -747,6 +748,9 @@ tienda.addEventListener('click', (e) => {
     } else if (e.target.classList.contains('agregar')) {
         const productoCarrito = e.target.closest('.card');
         leerProductoCarrito(productoCarrito);
+
+        numer += 1;
+        incrementar();
     }
 });
 
@@ -820,6 +824,14 @@ function crearCarrito() {
     });
 }
 
+function incrementar() {
+    document.getElementById("counter").innerText = numer;
+
+    if (numer > 0) {
+        document.getElementById("counter").style.display = "flex";
+    }
+}
+
 // Función para limpiar el contenido del carrito en la interfaz
 function limpiarHTML() {
     while (tbcarrito.firstChild) {
@@ -834,6 +846,9 @@ vaciarCarrito.addEventListener('click', () => {
     carrito.style.display = 'none';
 
     limpiarHTML();
+
+    numer = 0;
+    incrementar();
 });
 
 const pagar = document.querySelector('.pagar')

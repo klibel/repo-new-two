@@ -47,6 +47,19 @@ input:focus {
     cursor: pointer;
 }
 
+#counter{
+    background-color: black;
+    color: rgb(191, 104, 212);
+    height: 22px;
+    width: 22px;
+    border-radius: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -13px;
+}
+
 .nav-lateral{
     z-index: 10;
     display: none;

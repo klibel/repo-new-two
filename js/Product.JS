@@ -56,6 +56,5 @@ function crearVista(){
         main.appendChild(vistaCard)
     }
 }
-zoomed
 
 
