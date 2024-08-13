@@ -41,8 +41,8 @@ input:focus {
 }
 
 .nav-Pc img{
-    height: 35px;
-    width: 35px;
+    height: 37px;
+    width: 37px;
     margin-right: 2px;
     cursor: pointer;
 }
@@ -188,7 +188,7 @@ input:focus {
     text-align: center;
     grid-column: span 3;
     width: 400px; 
-    height: 200px;
+    height: 220px;
     box-sizing: border-box;
     background-color: black;
     display: flex;
