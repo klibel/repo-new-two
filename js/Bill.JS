@@ -86,10 +86,10 @@ function mostrarArticulos(data) {
                 ${cantidad}
             </td>
             <td>
-                ${precio}
+                $ ${precio}
             </td>
             <td>
-                ${totalArticulo}
+                $ ${totalArticulo}
             </td>
         `;
         listFactura.appendChild(table);

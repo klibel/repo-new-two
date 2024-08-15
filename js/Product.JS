@@ -48,7 +48,7 @@ function crearVista(){
         </div>
         <div class="infoCard">
             <h2>${nombre}</h2>
-            <h3>Precio: <span class="precio">${precio}</span></h3>
+            <h3>Precio: <span class="precio"> $ ${precio}</span></h3>
             <button id="regresar">Volver</button>
         </div>
         `
