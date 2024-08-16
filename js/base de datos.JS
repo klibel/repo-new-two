@@ -516,11 +516,13 @@ const tienda = document.querySelector('.tienda')
 const tablecarrito = document.querySelector('#list-carrito');
 const tbcarrito = document.querySelector('#list-carrito tbody');
 const vaciarCarrito = document.querySelector('#vaciar')
+const pagar = document.querySelector('#pagar');
+const zonePagar = document.querySelector('.pagar');
 let articulosCarrito = [];
 let numer = 0; // Inicializamos la variable
 
-function crearCardHTML(hogar) {
-    const { nombre, precio, imagen } = hogar;
+function crearCardHTML(producto) {
+    const { nombre, precio, imagen } = producto;
     return `
       <div class="card">
         <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
@@ -547,25 +549,6 @@ function mostrarCosas(cosasHogar) {
 
 mostrarCosas(cosasHogar);
 
-function crearCardHTML(electronico) {
-    const { nombre, precio, imagen } = electronico;
-    return `
-        <div class="card">
-            <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
-            <div class="contenido-card">
-                <div class="medida-responsive">
-                    <h3>${nombre}</h3>
-                    <p>Precio: $ <span class="precio">${precio}</span></p>
-                </div>
-                <div class="btn-responsive">
-                    <img class="agregar" src="img/carrito de compras.png" title="agregar a carrito" >
-                    <button class="ver">Ver</button>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
 function mostrarElectronicos(accesoriosElectronicos) {
     accesoriosElectronicos.forEach(electronico => {
         const cardHTML = crearCardHTML(electronico);
@@ -575,25 +558,6 @@ function mostrarElectronicos(accesoriosElectronicos) {
 
 mostrarElectronicos(accesoriosElectronicos);
 
-function crearCardHTML(caballero) {
-    const { nombre, precio, imagen } = caballero;
-    return `
-        <div class="card">
-            <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
-            <div class="contenido-card">
-            <div class="medida-responsive">
-                <h3>${nombre}</h3>
-                <p>Precio: $ <span class="precio">${precio}</span></p>
-            </div>
-            <div class="btn-responsive">
-                <img class="agregar" src="img/carrito de compras.png" title="agregar a carrito" >
-                <button class="ver">Ver</button>
-            </div>
-            </div>
-        </div>
-        `;
-}
-
 function mostrarRopaCaballero(prendasHombre) {
     prendasHombre.forEach(ropaHombre => {
         const cardHTML = crearCardHTML(ropaHombre);
@@ -602,25 +566,6 @@ function mostrarRopaCaballero(prendasHombre) {
 };
 
 mostrarRopaCaballero(prendasHombre)
-
-function crearCardHTML(dama) {
-    const { nombre, precio, imagen} = dama;
-    return `
-        <div class="card">
-            <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
-            <div class="contenido-card">
-            <div class="medida-responsive">
-                <h3>${nombre}</h3>
-                <p>Precio: $ <span class="precio">${precio}</span></p>
-            </div>
-            <div class="btn-responsive">
-                <img class="agregar" src="img/carrito de compras.png" title="agregar a carrito" >
-                <button class="ver">Ver</button>
-            </div>
-            </div>
-        </div>
-        `;
-};
 
 function mostrarRopaDama(prendasMujer) {
     prendasMujer.forEach(ropaMujer => {
@@ -824,11 +769,21 @@ function crearCarrito() {
     });
 }
 
+incrementar();
+
 function incrementar() {
     document.getElementById("counter").innerText = numer;
+    const noHayNada = document.querySelector('.noHaynada');
 
     if (numer > 0) {
         document.getElementById("counter").style.display = "flex";
+        tablecarrito.style.display = 'block';
+        pagar.style.display = 'block';
+        noHayNada.style.display = 'none';
+    } else if (numer < 1) {
+        tablecarrito.style.display = 'none';
+        pagar.style.display = 'none';
+        noHayNada.style.display = 'flex';
     }
 }
 
@@ -850,8 +805,6 @@ vaciarCarrito.addEventListener('click', () => {
     numer = 0;
     incrementar();
 });
-
-const pagar = document.querySelector('.pagar')
 
 pagar.addEventListener('click', e => {
     setTimeout(() => {
