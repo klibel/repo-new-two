@@ -777,7 +777,7 @@ function incrementar() {
 
     if (numer > 0) {
         document.getElementById("counter").style.display = "flex";
-        tablecarrito.style.display = 'block';
+        tablecarrito.style.display = '';
         pagar.style.display = 'block';
         noHayNada.style.display = 'none';
     } else if (numer < 1) {

@@ -324,7 +324,16 @@ input:focus {
     border: 1px 0px 0px 1px solid white;
     z-index: 10;
     animation: desplazamientoCarrito 1s;
-    text-align: center;
+}
+
+.noHaynada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noHaynada img {
+    width: 30px;
 }
 
 .carrito-list thead{
@@ -336,13 +345,7 @@ input:focus {
 }
 
 .noHaynada{
-   display: none;
-   align-items: center;
-}
-
-.noHaynada img {
-    width: 25px;
-    height: 25px;
+    text-align: center;
 }
 
 .pagar{
