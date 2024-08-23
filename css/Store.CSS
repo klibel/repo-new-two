@@ -190,8 +190,9 @@ input:focus {
 }
 
 .zoneHogar, .zoneElectronico, .zone-dama, .zone-caballero, #resultadosBusqueda{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); /* Crea un diseño de 12 columnas */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 20px 0px 20px 0px;
 }
 
