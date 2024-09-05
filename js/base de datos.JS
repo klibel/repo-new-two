@@ -525,7 +525,9 @@ function crearCardHTML(producto) {
     const { nombre, precio, imagen } = producto;
     return `
       <div class="card">
-        <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
+        <div class="cardIMG">
+          <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
+        </div>
         <div class="contenido-card">
           <div class="medida-responsive">
             <h3>${nombre}</h3>
@@ -611,7 +613,9 @@ inputBusqueda.addEventListener('keyup', e => {
             const { nombre, precio, imagen } = productoEncontrado;
             const cardHTML = `
                 <div class="card">
-                <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
+                <div class="cardIMG">
+                  <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
+                </div>
                 <div class="contenido-card">
                     <div class="medida-responsive">
                     <h3>${nombre}</h3>
@@ -663,7 +667,9 @@ function mostrarBusquedaNav(tipo) {
         const { nombre, precio, imagen } = producto;
         const cardHTML = `
         <div class="card">
-            <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
+            <div class="cardIMG">
+              <img src="${imagen}" id="imgCard" alt="Descripción de la imagen">
+            </div>
             <div class="contenido-card">
             <div class="medida-responsive">
                 <h3>${nombre}</h3>

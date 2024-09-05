@@ -211,17 +211,21 @@ input:focus {
     align-items: center;
     margin: 10px;
     transition: transform 0.5s ease-in-out;
-   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
     transform: scale(1.1); 
 }
 
+.cardIMG {
+    width: 50%;
+    height: 100%;
+}
+
 #imgCard {    
-    width: 190px;
-    height: 190px;
-    margin-left: 5px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
   
@@ -565,7 +569,7 @@ input:focus {
         width: 80px;
     }
 
-    .card img{
+    .cardIMG{
         margin-left: 5px;
         width: 48%;
         height: 90%;
@@ -607,7 +611,7 @@ input:focus {
         grid-column: span 5; 
     }
 
-    .card img{
+    .cardIMG{
         width: 48%;
         height: 90%;
     }
